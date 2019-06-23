@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <% include ../partials/header.ejs %>
+    <% include ../partials/header.ejs %>
 </head>
 
 <body>
 
-  <% include ../partials/nav.ejs %>
+    <% include ../partials/nav.ejs %>
 
-  <div class="card">
-    <div class="card-body">
-        <div class="card-header">
-            <h4 class="card-title">Postage Rates</h4>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-header">
+                <h4 class="card-title">Postage Rates</h4>
+            </div>
+
+            <form action="/getRate" method="GET">
+                <br />
+                <hr />
+
+                <label>Weight</label>
+                <input type="number" step="any" name="weight">
+                <br />
+                <select name="mail">
+                    <option value="stampLetter">Letters (Stamped)</option>
+                    <option value="meterLetter">Letters (Metered)</option>
+                    <option value="largeEnv">Large Envelopes (Flats)</option>
+                    <option value="package">First-Class Package Service—Retail</option>
+                </select>
+                <br />
+                <hr />
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br />
+                <hr />
+            </form>
+            <p><strong>Postage Rate: $</strong><%= result %></p>
         </div>
-
-        <form action="/getRate" method="GET">
-            <br />
-            <hr />
-
-            <label>Weight</label>
-            <input type="number" step="any" name="weight">
-            <br />
-            <select name="mail">
-                <option value="stampLetter">Letters (Stamped)</option>
-                <option value="meterLetter">Letters (Metered)</option>
-                <option value="largeEnv">Large Envelopes (Flats)</option>
-                <option value="package">First-Class Package Service—Retail</option>
-            </select>
-            <br />
-            <hr />
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <br />
-            <hr />
-        </form>
-        <p><strong>Postage Rate: $</strong><%= result %></p>
     </div>
-</div>
 
 
 </body>
+
 </html>
