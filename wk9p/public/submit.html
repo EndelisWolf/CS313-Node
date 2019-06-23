@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mailing Form</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+
+<body class="container">
+    <h1>Mail Cost Page</h1>
+    <div class="card">
+        <div class="card-body">
+            <div class="card-header">
+                <h4 class="card-title">Form</h4>
+            </div>
+
+            <form action="/getRate" method="GET">
+                <br />
+                <hr />
+
+                <label>Weight</label>
+                <input type="number" step="any" name="weight">
+                <br />
+                <select name="mail">
+					<option value="stampLetter">Letters (Stamped)</option>
+					<option value="meterLetter">Letters (Metered)</option>
+					<option value="largeEnv">Large Envelopes (Flats)</option>
+					<option value="package">First-Class Package Service—Retail</option>
+				</select>
+                <!-- <div class="btn-group" data-toggle="buttons">
+                     role="group" name="selection" 
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="option" id="stampLetter" checked> Letters (Stamped)
+                    </label>
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="option" id="meterLetter"> Letters (Metered)
+                    </label>
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="option" id="largeEnv"> Large Envelopes (Flats)
+                    </label>
+                    <label class="btn btn-primary active">
+                        <input type="radio" name="option" id="package"> First-Class Package Service—Retail
+                    </label>
+                </div> -->
+                <br />
+                <hr />
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br />
+                <hr />
+            </form>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+  <div class="card">
+    <div class="card-body">
+        <div class="card-header">
+            <h4 class="card-title">Postage Rates</h4>
+        </div>
+
+        <form action="/getRate" method="GET">
+            <br />
+            <hr />
+
+            <label>Weight</label>
+            <input type="number" name="weight">
+            <br />
+            <select name="mail">
+                <option value="stampLetter">Letters (Stamped)</option>
+                <option value="meterLetter">Letters (Metered)</option>
+                <option value="largeEnv">Large Envelopes (Flats)</option>
+                <option value="package">First-Class Package Service—Retail</option>
+            </select>
+            <!-- <div class="btn-group" data-toggle="buttons">
+                 role="group" name="selection"
+                <label class="btn btn-primary active">
+                    <input type="radio" name="option" id="stampLetter" checked> Letters (Stamped)
+                </label>
+                <label class="btn btn-primary active">
+                    <input type="radio" name="option" id="meterLetter"> Letters (Metered)
+                </label>
+                <label class="btn btn-primary active">
+                    <input type="radio" name="option" id="largeEnv"> Large Envelopes (Flats)
+                </label>
+                <label class="btn btn-primary active">
+                    <input type="radio" name="option" id="package"> First-Class Package Service—Retail
+                </label>
+            </div> -->
+            <br />
+            <hr />
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br />
+            <hr />
+        </form>
+        <p><strong>Postage Rate: $</strong><%= result %></p>
+    </div>
+</div>
+
+
+</body>
+</html>
