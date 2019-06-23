@@ -46,7 +46,7 @@ express()
         result = 1.00.toFixed(2);
       }
     }
-    else if (mail == 'largeEnv' || 'stampedLetter' > 3.5 || 'meterLetter' > 3.5) {
+    else if (mail == 'largeEnv' || mail == 'stampedLetter' && weight > 3.5 || mail == 'meterLetter' && weight > 3.5) {
       if (weight <= 1) {
         result = 1.00.toFixed(2);
       }
